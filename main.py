@@ -2,7 +2,7 @@ from discord.ext import commands
 import discord
 
 bot = commands.Bot(command_prefix="!")
-TOKEN = "put token here matty you fucking retard"
+TOKEN = "NzQ1NjIzMDI5ODIzOTYzMjU2.Xz0djw.D1Ba9tXekh_PG1G85cIqtuZCLN4"
 
 
 @bot.event
@@ -43,14 +43,15 @@ async def lolis(ctx):
 async def women(ctx):
     await ctx.send('https://image.emojipng.com/54/12456054.jpg')
 
+## commands below are depreciated 
 
-@bot.command()
-async def nekosu(ctx):
-  await ctx.send('Pls play nekosu i am desperate https://nekos.cc/')
+## @bot.command()
+## async def nekosu(ctx):
+##   await ctx.send('Pls play nekosu i am desperate https://nekos.cc/')
 
-@bot.command()
-async def cookiezi(ctx):
-  await ctx.send('Check if Cookiezi is up here: https://c.cookiezi.gay')
+## @bot.command()
+## async def cookiezi(ctx):
+##   await ctx.send('Check if Cookiezi is up here: https://c.cookiezi.gay')
 
 ## end of boring commands and the start of the embeds
 
@@ -58,6 +59,18 @@ async def cookiezi(ctx):
 async def embed(ctx):
     embed=discord.Embed(title="we do a little trolling", url="https://nekos.cc/", description="This is a sample embed. If you are seeing this matty actually did something right", color=0xFF5733)
     await ctx.send(embed=embed)
+
+@bot.command()
+async def nekosu(ctx):
+    embed=discord.Embed(title="Nekosu!", url="https://nekos.cc/", description="Nekosu! is an osu! private server basically based around catboys/catgirls. We also praise Astolfo", color=0xfc03df)
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def cookiezi(ctx):
+    embed=discord.Embed(title="osu!Cookiezi", url="https://cookiezi.gay/", description="osu!Cookiezi is matty's secondary server that runs gulag instead of ripple. This server is considered to be less important so won't get updates very often and there's no guarantee that it will always work. This server is the first dedicated cheating server running on Gulag.", color=0xfc03df)
+    await ctx.send(embed=embed)
+
+
 
 @bot.command()
 async def catboy(ctx):
