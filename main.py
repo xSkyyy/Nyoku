@@ -2,7 +2,7 @@ from discord.ext import commands
 import discord
 
 bot = commands.Bot(command_prefix="!")
-TOKEN = "NzQ1NjIzMDI5ODIzOTYzMjU2.Xz0djw.bUmwBi34rsadpcDOG1gWpoWmMdk"
+TOKEN = "put token here matty you fucking retard"
 
 
 @bot.event
