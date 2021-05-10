@@ -13,7 +13,7 @@ async def on_ready():
 
 ## @bot.command()
 ## async def last(ctx):
-## 	last = discord.Embed("[USER](https://nekos.cc/u/1000?mode=0).",color=0x0000ff)
+## 	last = discord.Embed("[USER](https://nekos.cc/u/1000?mode=0).",colour=0x0000ff)
 ## 	last.description = f"[USER](https://nekos.cc/u/1000?mode=0)."
 ## 	last.add_field(name="Field2", value="hi2", inline=True)
 ## 	last.add_field(name="Field2", value="hi2", inline=True)
@@ -57,17 +57,17 @@ async def women(ctx):
 
 @bot.command()
 async def embed(ctx):
-    embed=discord.Embed(title="we do a little trolling", url="https://nekos.cc/", description="This is a sample embed. If you are seeing this matty actually did something right", color=0xFF5733)
+    embed=discord.Embed(title="we do a little trolling", url="https://nekos.cc/", description="This is a sample embed. If you are seeing this matty actually did something right", colour=0xFF5733)
     await ctx.send(embed=embed)
 
 @bot.command()
 async def nekosu(ctx):
-    embed=discord.Embed(title="Nekosu!", url="https://nekos.cc/", description="Nekosu! is an osu! private server basically based around catboys/catgirls. We also praise Astolfo", color=0xfc03df)
+    embed=discord.Embed(title="Nekosu!", url="https://nekos.cc/", description="Nekosu! is an osu! private server basically based around catboys/catgirls. We also praise Astolfo", colour=0xfc03df)
     await ctx.send(embed=embed)
 
 @bot.command()
 async def cookiezi(ctx):
-    embed=discord.Embed(title="osu!Cookiezi", url="https://cookiezi.gay/", description="osu!Cookiezi is matty's secondary server that runs gulag instead of ripple. This server is considered to be less important so won't get updates very often and there's no guarantee that it will always work. This server is the first dedicated cheating server running on Gulag.", color=0xfc03df)
+    embed=discord.Embed(title="osu!Cookiezi", url="https://cookiezi.gay/", description="osu!Cookiezi is matty's secondary server that runs gulag instead of ripple. This server is considered to be less important so won't get updates very often and there's no guarantee that it will always work. This server is the first dedicated cheating server running on Gulag.", colour=0xfc03df)
     await ctx.send(embed=embed)
 
 
