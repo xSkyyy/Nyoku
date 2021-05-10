@@ -2,7 +2,7 @@ from discord.ext import commands
 import discord
 
 bot = commands.Bot(command_prefix="!")
-TOKEN = "NzQ1NjIzMDI5ODIzOTYzMjU2.Xz0djw.D1Ba9tXekh_PG1G85cIqtuZCLN4"
+TOKEN = "insert token here"
 
 
 @bot.event
