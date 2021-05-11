@@ -72,7 +72,7 @@ async def cookiezi(ctx):
 
 @bot.command()
 async def source(ctx):
-    embed=discord.Embed(title="Nyoko source code!", url="https://github.com/mattylive/nyoko", description="Linked above is the full Nyoko source code (usually kept up to date with the production code)", colour=0xfc03df)
+    embed=discord.Embed(title="Nyoku source code!", url="https://github.com/mattylive/Nyoku", description="Linked above is the full Nyoku source code (usually kept up to date with the production code)", colour=0xfc03df)
     await ctx.send(embed=embed)
 
 
@@ -80,14 +80,14 @@ async def source(ctx):
 async def catboy(ctx):
     embed=discord.Embed(title="Catboy", url="https://cdn.donmai.us/sample/ac/d4/sample-acd4d3388360a9b5a1bcd860a25bd438.jpg", description="Enjoy this catboy image")
     embed.set_image(url="https://cdn.donmai.us/sample/ac/d4/sample-acd4d3388360a9b5a1bcd860a25bd438.jpg")
-    embed.set_author(name="Nyoko", url='https://nekos.cc/nyoko', icon_url='https://a.nekos.cc/1689')
+    embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
     await ctx.send(embed=embed)
 
 @bot.command()
 async def catgirl(ctx):
     embed=discord.Embed(title="Catgirl", url="https://cdn.donmai.us/sample/ac/d4/sample-acd4d3388360a9b5a1bcd860a25bd438.jpg", description="Not as good as catboys but still coot :3")
     embed.set_image(url=(nekos.img('neko')))
-    embed.set_author(name="Nyoko", url='https://nekos.cc/nyoko', icon_url='https://a.nekos.cc/1689')
+    embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
     await ctx.send(embed=embed)
 
 
