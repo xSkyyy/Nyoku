@@ -1,14 +1,19 @@
 from discord.ext import commands
-import discord
-import nekos
+import discord, nekos, var, config, random, datetime, os
 
-bot = commands.Bot(command_prefix="!")
-TOKEN = "put your token here"
-
+bot = commands.Bot(command_prefix=config.prefix)
+TOKEN = config.token
 
 @bot.event
 async def on_ready():
-	print(f'Bot connected as {bot.user}')
+    os.system('clear')
+    print('\n\x1b[35m ███╗   ██╗██╗   ██╗ ██████╗ ██╗  ██╗██╗   ██╗');
+    print('\x1b[95m ████╗  ██║╚██╗ ██╔╝██╔═══██╗██║ ██╔╝██║   ██║');
+    print('\x1b[35m ██╔██╗ ██║ ╚████╔╝ ██║   ██║█████╔╝ ██║   ██║');
+    print('\x1b[95m ██║╚██╗██║  ╚██╔╝  ██║   ██║██╔═██╗ ██║   ██║');
+    print('\x1b[35m ██║ ╚████║   ██║   ╚██████╔╝██║  ██╗╚██████╔╝');
+    print('\x1b[95m ╚═╝  ╚═══╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝ ╚═════╝')
+    print(f'\x1b[35m\n Logged in as {bot.user}\n\x1b[0m')
 
 ## this embed no worky innit
 
@@ -27,7 +32,6 @@ async def on_ready():
 async def hi(ctx):
     await ctx.send('whats up twat')
 
-
 @bot.command()
 async def cum(ctx):
     await ctx.send('https://cdn.discordapp.com/emojis/797469159403421774.png')
@@ -43,7 +47,6 @@ async def lolis(ctx):
 @bot.command()
 async def women(ctx):
     await ctx.send('https://image.emojipng.com/54/12456054.jpg')
-
 
 ## @bot.command()
 ## async def nekosu(ctx):
@@ -75,7 +78,6 @@ async def source(ctx):
     embed=discord.Embed(title="Nyoku source code!", url="https://github.com/mattylive/Nyoku", description="Linked above is the full Nyoku source code (usually kept up to date with the production code)", colour=0xfc03df)
     await ctx.send(embed=embed)
 
-
 @bot.command()
 async def catboy(ctx):
     embed=discord.Embed(title="Catboy", url="https://cdn.donmai.us/sample/ac/d4/sample-acd4d3388360a9b5a1bcd860a25bd438.jpg", description="Enjoy this catboy image")
@@ -90,5 +92,34 @@ async def catgirl(ctx):
     embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
     await ctx.send(embed=embed)
 
+@bot.command()
+async def pp(ctx):
+    embed = discord.Embed(title="PEEPEE SIZE MACHINE", color=0xfc03df)
+    embed.add_field(name=ctx.message.author.name + "'s pp size is:", value=" 8{}D".format(random.choice(var.ppSizes)), inline=False)
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def roll(ctx):
+    embed = discord.Embed(title=":game_die: Roll the die.", color=0xfc03df)
+    embed.add_field(name=ctx.message.author.name + "'s, roll:", value="{}".format(random.randint(var.minimum, var.maximum)), inline=False)
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def ball(ctx):
+    embed = discord.Embed(title=ctx.message.author.name + " asked: " + ctx.message.content[6:], description=":8ball: | " + random.choice(var.ball), color=0xfc03df)
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def avatar(ctx):
+    embed = discord.Embed(color=0xfc03df, timestamp=datetime.datetime.utcnow())
+    embed.set_author(name=ctx.author.name, url=ctx.author.avatar_url, icon_url=ctx.author.avatar_url)
+    embed.set_image(url=ctx.author.avatar_url)
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def blush(ctx):
+    embed = discord.Embed(title=":two_hearts: " + ctx.message.author.name + " is blushing... awww!" , color=0xfc03df, timestamp=datetime.datetime.utcnow())
+    embed.set_image(url="{}".format(random.choice(var.blushGifs)))
+    await ctx.send(embed=embed)
 
 bot.run(TOKEN)
