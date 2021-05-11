@@ -14,3 +14,9 @@ Installation of Nyoko is really simple. This has been tested with Python 3.6 on 
 `python3.6 -m pip install -r requirements.txt`
 4. run the bot
 `python3.6 main.py`
+
+# Current uses
+
+I'll be honest, this bot doesn't have many uses currently. You can check out the production build that will be running 24/7 on my [Discord server.](https://discord.gg/HdRtYrdK7p)
+
+
