@@ -12,7 +12,9 @@ Installation of Nyoko is really simple. This has been tested with Python 3.6 on 
 `cd nyoko`
 3. Install requirements
 `python3.6 -m pip install -r requirements.txt`
-4. run the bot
+4. Edit config.py
+`nano config.py` 
+5. Run the bot
 `python3.6 main.py`
 
 # Current uses
