@@ -180,5 +180,12 @@ async def cat(ctx):
     embed.set_image(url=(nekos.cat()))
     embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
     await ctx.send(embed=embed)
-    
+
+@bot.command()
+async def cuddle(ctx):
+    embed=discord.Embed(title="Cuddles", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description="so soft :pleading_face:")
+    embed.set_image(url=(nekos.img('cuddle')))
+    embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
+    await ctx.send(embed=embed)
+
 bot.run(TOKEN)
