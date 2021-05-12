@@ -129,7 +129,7 @@ async def feet(ctx):
         await ctx.send("This command can only be used in nsfw channels.")
         return
 
-    embed=discord.Embed(title="Feet :flushed:", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description="why did i make this - Matty 2021", color=0xfc03df)
+    embed=discord.Embed(title="Feet :flushed:", url="https://nekos.life/", description="why did i make this - Matty 2021", color=0xfc03df)
     embed.set_image(url=(nekos.img('feet')))
     embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
     await ctx.send(embed=embed)
@@ -140,7 +140,7 @@ async def trap(ctx):
         await ctx.send("This command can only be used in nsfw channels.")
         return
 
-    embed=discord.Embed(title="Traps", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description="You have good taste", color=0xfc03df)
+    embed=discord.Embed(title="Traps", url="https://nekos.life/", description="You have good taste", color=0xfc03df)
     embed.set_image(url=(nekos.img('trap')))
     embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
     await ctx.send(embed=embed)
@@ -151,7 +151,7 @@ async def nsfwgif(ctx):
         await ctx.send("This command can only be used in nsfw channels.")
         return
 
-    embed=discord.Embed(title="Nsfw Neko Gif", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description="it moves :flushed:", color=0xfc03df)
+    embed=discord.Embed(title="Nsfw Neko Gif", url="https://nekos.life/", description="it moves :flushed:", color=0xfc03df)
     embed.set_image(url=(nekos.img('nsfw_neko_gif')))
     embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
     await ctx.send(embed=embed)   
@@ -159,12 +159,12 @@ async def nsfwgif(ctx):
 @bot.command(aliases=['headpat'])
 async def pat(ctx, member:discord.Member=None):
     if member is None:
-        embed=discord.Embed(title="Headpats", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description=f'{ctx.author.name} wants a headpat :pleading_face:', color=0xfc03df)
+        embed=discord.Embed(title="Headpats", url="https://nekos.life/", description=f'{ctx.author.name} wants a headpat :pleading_face:', color=0xfc03df)
         embed.set_image(url=(nekos.img('pat')))
         embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
         await ctx.send(embed=embed)
     else:
-        embed=discord.Embed(title="Headpats", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description=f'{ctx.author.name} pats {member.name} :pleading_face:', color=0xfc03df)
+        embed=discord.Embed(title="Headpats", url="https://nekos.life/", description=f'{ctx.author.name} pats {member.name} :pleading_face:', color=0xfc03df)
         embed.set_image(url=(nekos.img('pat')))
         embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
         await ctx.send(embed=embed)
@@ -172,12 +172,12 @@ async def pat(ctx, member:discord.Member=None):
 @bot.command(aliases=['hug'])
 async def cuddle(ctx, member:discord.Member=None):
     if member is None:
-        embed=discord.Embed(title="Cuddles", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description=f'{ctx.author.name} wants to be cuddled :pleading_face:', color=0xfc03df)
+        embed=discord.Embed(title="Cuddles", url="https://nekos.life/", description=f'{ctx.author.name} wants to be cuddled :pleading_face:', color=0xfc03df)
         embed.set_image(url=(nekos.img('cuddle')))
         embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
         await ctx.send(embed=embed)
     else:
-        embed=discord.Embed(title="Cuddles", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description=f'{ctx.author.name} cuddles {member.name} :pleading_face:', color=0xfc03df)
+        embed=discord.Embed(title="Cuddles", url="https://nekos.life/", description=f'{ctx.author.name} cuddles {member.name} :pleading_face:', color=0xfc03df)
         embed.set_image(url=(nekos.img('cuddle')))
         embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
         await ctx.send(embed=embed)
@@ -188,21 +188,21 @@ async def cum(ctx):
         await ctx.send("This command can only be used in nsfw channels.")
         return
 
-    embed=discord.Embed(title="Cum", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description="Yummy cummies :yum:", color=0xfc03df)
+    embed=discord.Embed(title="Cum", url="https://nekos.life/", description="Yummy cummies :yum:", color=0xfc03df)
     embed.set_image(url=(nekos.img('cum')))
     embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
     await ctx.send(embed=embed)
     
 @bot.command()
 async def doggo(ctx):
-    embed=discord.Embed(title="Doggo", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description="Woof woof :3", color=0xfc03df)
+    embed=discord.Embed(title="Doggo", url="https://nekos.life/", description="Woof woof :3", color=0xfc03df)
     embed.set_image(url=(nekos.img('woof')))
     embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
     await ctx.send(embed=embed)
     
 @bot.command()
 async def foxgirl(ctx):
-    embed=discord.Embed(title="Fox girl", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description="Fox girls are cute :pleading_face:", color=0xfc03df)
+    embed=discord.Embed(title="Fox girl", url="https://nekos.life/", description="Fox girls are cute :pleading_face:", color=0xfc03df)
     embed.set_image(url=(nekos.img('fox_girl')))
     embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
     await ctx.send(embed=embed)
@@ -218,7 +218,7 @@ async def fox(ctx):
       
 @bot.command()
 async def cat(ctx):
-    embed=discord.Embed(title="Cat", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description="Cats are adorable :3", color=0xfc03df)
+    embed=discord.Embed(title="Cat", url="https://nekos.life/", description="Cats are adorable :3", color=0xfc03df)
     embed.set_image(url=(nekos.cat()))
     embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
     await ctx.send(embed=embed)
@@ -229,7 +229,7 @@ async def bj(ctx):
         await ctx.send("This command can only be used in nsfw channels.")
         return
 
-    embed=discord.Embed(title="Blowjob", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description="Suck some more for the cummies", color=0xfc03df)
+    embed=discord.Embed(title="Blowjob", url="https://nekos.life/", description="Suck some more for the cummies", color=0xfc03df)
     embed.set_image(url=(nekos.img('bj')))
     embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
     await ctx.send(embed=embed)
@@ -240,8 +240,24 @@ async def anal(ctx):
         await ctx.send("This command can only be used in nsfw channels.")
         return
 
-    embed=discord.Embed(title="Anal", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description=":flushed:", color=0xfc03df)
+    embed=discord.Embed(title="Anal", url="https://nekos.life/", description=":flushed:", color=0xfc03df)
     embed.set_image(url=(nekos.img('anal')))
+    embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
+    await ctx.send(embed=embed)
+
+@bot.command(aliases=['cutie'])
+async def astolfo(ctx):
+    astolfo = requests.get("https://astolfo.rocks/api/v1/images/random")
+
+    embed=discord.Embed(title="Astolfo", url="https://astolfo.rocks", description="Astolfo my beloved :pleading_face:", color=0xfc03df)
+    embed.set_image(url=(astolfo.json()["url"]))
+    embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def invite(ctx):
+    embed=discord.Embed(title="Click here to invite Nyoku to your server!", url="https://discord.com/oauth2/authorize?client_id=745623029823963256&scope=bot&permissions=8", color=0xfc03df)
+    embed.set_image(url=(nekos.img('neko')))
     embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
     await ctx.send(embed=embed)
 
