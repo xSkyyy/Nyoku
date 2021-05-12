@@ -137,4 +137,20 @@ async def trap(ctx):
     embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
     await ctx.send(embed=embed)
 
+@bot.command()
+async def nsfwgif(ctx):
+    embed=discord.Embed(title="Nsfw Neko Gif", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description="it moves :flushed:")
+    embed.set_image(url=(nekos.img('nsfw_neko_gif')))
+    embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
+    await ctx.send(embed=embed)   
+    
+    
+@bot.command()
+async def pat(ctx):
+    embed=discord.Embed(title="Headpats", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description="How cute :pleading_face:")
+    embed.set_image(url=(nekos.img('pat')))
+    embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
+    await ctx.send(embed=embed)  
+    
+
 bot.run(TOKEN)
