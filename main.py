@@ -222,5 +222,19 @@ async def cat(ctx):
     embed.set_image(url=(nekos.cat()))
     embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
     await ctx.send(embed=embed)
+    
+@bot.command()
+async def bj(ctx):
+    embed=discord.Embed(title="Blowjob", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description="Suck some more for the cummies")
+    embed.set_image(url=(nekos.img('bj')))
+    embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
+    await ctx.send(embed=embed)
+    
+@bot.command()
+async def anal(ctx):
+    embed=discord.Embed(title="Anal", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description=":flushed:")
+    embed.set_image(url=(nekos.img('anal')))
+    embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
+    await ctx.send(embed=embed)
 
 bot.run(TOKEN)
