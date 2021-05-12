@@ -87,7 +87,7 @@ async def catboy(ctx):
 
 @bot.command()
 async def catgirl(ctx):
-    embed=discord.Embed(title="Catgirl", url="https://cdn.donmai.us/sample/ac/d4/sample-acd4d3388360a9b5a1bcd860a25bd438.jpg", description="Not as good as catboys but still coot :3")
+    embed=discord.Embed(title="Catgirl", url="https://nekos.life/", description="Not as good as catboys but still coot :3")
     embed.set_image(url=(nekos.img('neko')))
     embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
     await ctx.send(embed=embed)
@@ -120,6 +120,21 @@ async def avatar(ctx):
 async def blush(ctx):
     embed = discord.Embed(title=":two_hearts: " + ctx.message.author.name + " is blushing... awww!" , color=0xfc03df, timestamp=datetime.datetime.utcnow())
     embed.set_image(url="{}".format(random.choice(var.blushGifs)))
+    await ctx.send(embed=embed)
+
+
+@bot.command()
+async def feet(ctx):
+    embed=discord.Embed(title="Feet :flushed:", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description="why did i make this - Matty 2021")
+    embed.set_image(url=(nekos.img('feet')))
+    embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def trap(ctx):
+    embed=discord.Embed(title="Traps", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description="You have good taste")
+    embed.set_image(url=(nekos.img('trap')))
+    embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
     await ctx.send(embed=embed)
 
 bot.run(TOKEN)
