@@ -32,9 +32,9 @@ async def on_ready():
 async def hi(ctx):
     await ctx.send('whats up twat')
 
-@bot.command()
-async def cum(ctx):
-    await ctx.send('https://cdn.discordapp.com/emojis/797469159403421774.png')
+## @bot.command()
+## async def cum(ctx):
+##     await ctx.send('https://cdn.discordapp.com/emojis/797469159403421774.png')
 
 @bot.command()
 async def sex(ctx):
@@ -150,7 +150,35 @@ async def pat(ctx):
     embed=discord.Embed(title="Headpats", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description="How cute :pleading_face:")
     embed.set_image(url=(nekos.img('pat')))
     embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
-    await ctx.send(embed=embed)  
-    
+    await ctx.send(embed=embed)
 
+
+@bot.command()
+async def cum(ctx):
+    embed=discord.Embed(title="Cum", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description="Yummy cummies :yum:")
+    embed.set_image(url=(nekos.img('cum')))
+    embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
+    await ctx.send(embed=embed)
+    
+@bot.command()
+async def doggo(ctx):
+    embed=discord.Embed(title="Doggo", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description="Woof woof :3")
+    embed.set_image(url=(nekos.img('woof')))
+    embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
+    await ctx.send(embed=embed)
+    
+@bot.command()
+async def fox(ctx):
+    embed=discord.Embed(title="Fox girl", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description="Fox girls are cute :pleading_face:")
+    embed.set_image(url=(nekos.img('fox_girl')))
+    embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
+    await ctx.send(embed=embed)
+      
+@bot.command()
+async def cat(ctx):
+    embed=discord.Embed(title="Cat", url="https://github.com/Nekos-life/nekos.py/blob/master/nekos/nekos.py#L18", description="Cats are adorable :3")
+    embed.set_image(url=(nekos.cat()))
+    embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
+    await ctx.send(embed=embed)
+    
 bot.run(TOKEN)
