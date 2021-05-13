@@ -7,9 +7,9 @@ Nyoku is a simple discord bot being developed by matty and others in their space
 Installation of Nyoku is really simple. This has been tested with Python 3.6 on Windows 10 and Ubuntu 18.04.
 
 1. Clone the repo 
-`git clone https://github.com/mattylive/nyoku`
+`git clone https://github.com/mattylive/Nyoku`
 2. cd into the directory
-`cd nyoko`
+`cd Nyoku`
 3. Install requirements
 `python3.6 -m pip install -r requirements.txt`
 4. Edit config.py
