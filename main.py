@@ -254,6 +254,19 @@ async def astolfo(ctx):
     embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
     await ctx.send(embed=embed)
 
+@bot.command(aliases=['gay'])
+async def yaoi(ctx):
+    if not ctx.channel.is_nsfw():
+        await ctx.send("This command can only be used in nsfw channels.")
+        return
+
+    yaoi = requests.get("https://purrbot.site/api/img/nsfw/yaoi/gif")
+
+    embed=discord.Embed(title="Yaoi", url="https://astolfo.rocks", description="too hot :pleading_face:", color=0xfc03df)
+    embed.set_image(url=(yaoi.json()["link"]))
+    embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
+    await ctx.send(embed=embed)
+
 @bot.command()
 async def invite(ctx):
     embed=discord.Embed(title="Click here to invite Nyoku to your server!", url="https://discord.com/oauth2/authorize?client_id=745623029823963256&scope=bot&permissions=8", color=0xfc03df)
