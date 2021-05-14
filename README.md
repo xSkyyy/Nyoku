@@ -19,6 +19,6 @@ Installation of Nyoku is really simple. This has been tested with Python 3.6 on 
 
 # Current uses
 
-The only real use of this bot currently is the NSFW commands (powwered by [Nekos.life](https://nekos.life). You can check out the production build that will be running 24/7 on my [Discord server.](https://discord.gg/HdRtYrdK7p)
+The only real use of this bot currently is the NSFW commands (powered by [Nekos.life](https://nekos.life). You can check out the production build that will be running 24/7 on my [Discord server.](https://discord.gg/HdRtYrdK7p)
 
 
