@@ -13,6 +13,7 @@ async def on_ready():
     print('\x1b[95m ██║╚██╗██║  ╚██╔╝  ██║   ██║██╔═██╗ ██║   ██║');
     print('\x1b[35m ██║ ╚████║   ██║   ╚██████╔╝██║  ██╗╚██████╔╝');
     print('\x1b[95m ╚═╝  ╚═══╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝ ╚═════╝')
+    await bot.change_presence(activity=discord.Streaming(name="Follow matty on Twitch", url='https://twitch.tv/mattylive_'))
     print(f'\x1b[35m\n Logged in as {bot.user}\n\x1b[0m')
 
 ## this embed no worky innit
@@ -126,7 +127,7 @@ async def blush(ctx):
 @bot.command()
 async def feet(ctx):
     if not ctx.channel.is_nsfw():
-        await ctx.send("This command can only be used in nsfw channels.")
+        await ctx.send("Stop being horny in general")
         return
 
     embed=discord.Embed(title="Feet :flushed:", url="https://nekos.life/", description="why did i make this - Matty 2021", color=0xfc03df)
@@ -137,7 +138,7 @@ async def feet(ctx):
 @bot.command()
 async def trap(ctx):
     if not ctx.channel.is_nsfw():
-        await ctx.send("This command can only be used in nsfw channels.")
+        await ctx.send("Stop being horny in general")
         return
 
     embed=discord.Embed(title="Traps", url="https://nekos.life/", description="You have good taste", color=0xfc03df)
@@ -148,7 +149,7 @@ async def trap(ctx):
 @bot.command()
 async def nsfwgif(ctx):
     if not ctx.channel.is_nsfw():
-        await ctx.send("This command can only be used in nsfw channels.")
+        await ctx.send("Stop being horny in general")
         return
 
     embed=discord.Embed(title="Nsfw Neko Gif", url="https://nekos.life/", description="it moves :flushed:", color=0xfc03df)
@@ -185,7 +186,7 @@ async def cuddle(ctx, member:discord.Member=None):
 @bot.command()
 async def cum(ctx):
     if not ctx.channel.is_nsfw():
-        await ctx.send("This command can only be used in nsfw channels.")
+        await ctx.send("Stop being horny in general")
         return
 
     embed=discord.Embed(title="Cum", url="https://nekos.life/", description="Yummy cummies :yum:", color=0xfc03df)
@@ -226,7 +227,7 @@ async def cat(ctx):
 @bot.command(aliases=['blowjob'])
 async def bj(ctx):
     if not ctx.channel.is_nsfw():
-        await ctx.send("This command can only be used in nsfw channels.")
+        await ctx.send("Stop being horny in general")
         return
 
     embed=discord.Embed(title="Blowjob", url="https://nekos.life/", description="Suck some more for the cummies", color=0xfc03df)
@@ -237,7 +238,7 @@ async def bj(ctx):
 @bot.command()
 async def anal(ctx):
     if not ctx.channel.is_nsfw():
-        await ctx.send("This command can only be used in nsfw channels.")
+        await ctx.send("Stop being horny in general")
         return
 
     embed=discord.Embed(title="Anal", url="https://nekos.life/", description=":flushed:", color=0xfc03df)
@@ -257,7 +258,7 @@ async def astolfo(ctx):
 @bot.command(aliases=['gay'])
 async def yaoi(ctx):
     if not ctx.channel.is_nsfw():
-        await ctx.send("This command can only be used in nsfw channels.")
+        await ctx.send("Stop being horny in general")
         return
 
     yaoi = requests.get("https://purrbot.site/api/img/nsfw/yaoi/gif")
@@ -273,5 +274,30 @@ async def invite(ctx):
     embed.set_image(url=(nekos.img('neko')))
     embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
     await ctx.send(embed=embed)
+
+@bot.command(aliases=['testing'])
+async def test(ctx):
+#    test = requests.get("https://api.nekos.cc/hentai")
+
+    embed=discord.Embed(title="Test", url="https://api.nekos.cc/hentai", description="i hope it works", color=0xfc03df)
+    embed.set_image(url=('https://api.nekos.cc/hentai'))
+    embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def fuck(ctx, member:discord.Member=None):
+    if not ctx.channel.is_nsfw():
+        await ctx.send("Stop being horny in general")
+        return
+    if member is None:
+        embed=discord.Embed(title="Sex", url="https://nekos.life/", description=f'{ctx.author.name} wants to be fucked :pleading_face: :hot_face:', color=0xfc03df)
+        embed.set_image(url=(nekos.img('random_hentai_gif')))
+        embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
+        await ctx.send(embed=embed)
+    else:
+        embed=discord.Embed(title="Sex", url="https://nekos.life/", description=f'{ctx.author.name} fucks {member.name} :hot_face:', color=0xfc03df)
+        embed.set_image(url=(nekos.img('random_hentai_gif')))
+        embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
+        await ctx.send(embed=embed)
 
 bot.run(TOKEN)
