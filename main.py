@@ -299,5 +299,19 @@ async def fuck(ctx, member:discord.Member=None):
         embed.set_image(url=(nekos.img('random_hentai_gif')))
         embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
         await ctx.send(embed=embed)
+        
+        
+@bot.command()
+async def troll(ctx, member:discord.Member=None):
+    if member is None:
+        embed=discord.Embed(title="Troll", url="https://api.nekos.cc/troll", description=f'{ctx.author.name} wants to do a little trolling', color=0xfc03df)
+        embed.set_image(url=('https://api.nekos.cc/troll'))
+        embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
+        await ctx.send(embed=embed)
+    else:
+        embed=discord.Embed(title="Troll", url="https://api.nekos.cc/troll", description=f'{ctx.author.name} trolls {member.name} :trolley:', color=0xfc03df)
+        embed.set_image(url=('https://api.nekos.cc/troll'))
+        embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
+        await ctx.send(embed=embed)
 
 bot.run(TOKEN)
