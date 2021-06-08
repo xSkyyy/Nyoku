@@ -4,6 +4,8 @@ import discord, nekos, var, config, random, datetime, os, requests
 bot = commands.Bot(command_prefix=config.prefix)
 TOKEN = config.token
 
+# i am fully aware this code is a fucking mess
+
 @bot.event
 async def on_ready():
     os.system('clear')
@@ -16,27 +18,11 @@ async def on_ready():
     await bot.change_presence(activity=discord.Streaming(name="Follow matty on Twitch", url='https://twitch.tv/mattylive_'))
     print(f'\x1b[35m\n Logged in as {bot.user}\n\x1b[0m')
 
-## this embed no worky innit
-
-## @bot.command()
-## async def last(ctx):
-## 	last = discord.Embed("[USER](https://nekos.cc/u/1000?mode=0).",colour=0x0000ff)
-## 	last.description = f"[USER](https://nekos.cc/u/1000?mode=0)."
-## 	last.add_field(name="Field2", value="hi2", inline=True)
-## 	last.add_field(name="Field2", value="hi2", inline=True)
-## 	last.set_image(url="https://assets.ppy.sh/beatmaps/1/covers/cover.jpg")
-## 	await ctx.send(embed=last)
-
-## the commands below are boring lol
-## sheesh
 
 @bot.command()
 async def hi(ctx):
     await ctx.send('whats up twat')
 
-## @bot.command()
-## async def cum(ctx):
-##     await ctx.send('https://cdn.discordapp.com/emojis/797469159403421774.png')
 
 @bot.command()
 async def sex(ctx):
@@ -50,15 +36,6 @@ async def lolis(ctx):
 async def women(ctx):
     await ctx.send('https://image.emojipng.com/54/12456054.jpg')
 
-## @bot.command()
-## async def nekosu(ctx):
-##   await ctx.send('Pls play nekosu i am desperate https://nekos.cc/')
-
-## @bot.command()
-## async def cookiezi(ctx):
-##   await ctx.send('Check if Cookiezi is up here: https://c.cookiezi.gay')
-
-## end of boring commands and the start of the embeds
 
 @bot.command()
 async def embed(ctx):
