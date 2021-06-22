@@ -4,8 +4,6 @@ import discord, nekos, var, config, random, datetime, os, requests
 bot = commands.Bot(command_prefix=config.prefix)
 TOKEN = config.token
 
-# i am fully aware this code is a fucking mess
-
 @bot.event
 async def on_ready():
     os.system('clear')
@@ -18,11 +16,27 @@ async def on_ready():
     await bot.change_presence(activity=discord.Streaming(name="Follow matty on Twitch", url='https://twitch.tv/mattylive_'))
     print(f'\x1b[35m\n Logged in as {bot.user}\n\x1b[0m')
 
+## this embed no worky innit
+
+## @bot.command()
+## async def last(ctx):
+## 	last = discord.Embed("[USER](https://nekos.cc/u/1000?mode=0).",colour=0x0000ff)
+## 	last.description = f"[USER](https://nekos.cc/u/1000?mode=0)."
+## 	last.add_field(name="Field2", value="hi2", inline=True)
+## 	last.add_field(name="Field2", value="hi2", inline=True)
+## 	last.set_image(url="https://assets.ppy.sh/beatmaps/1/covers/cover.jpg")
+## 	await ctx.send(embed=last)
+
+## the commands below are boring lol
+## sheesh
 
 @bot.command()
 async def hi(ctx):
     await ctx.send('whats up twat')
 
+## @bot.command()
+## async def cum(ctx):
+##     await ctx.send('https://cdn.discordapp.com/emojis/797469159403421774.png')
 
 @bot.command()
 async def sex(ctx):
@@ -36,6 +50,15 @@ async def lolis(ctx):
 async def women(ctx):
     await ctx.send('https://image.emojipng.com/54/12456054.jpg')
 
+## @bot.command()
+## async def nekosu(ctx):
+##   await ctx.send('Pls play nekosu i am desperate https://nekos.cc/')
+
+## @bot.command()
+## async def cookiezi(ctx):
+##   await ctx.send('Check if Cookiezi is up here: https://c.cookiezi.gay')
+
+## end of boring commands and the start of the embeds
 
 @bot.command()
 async def embed(ctx):
@@ -55,13 +78,6 @@ async def cookiezi(ctx):
 @bot.command()
 async def source(ctx):
     embed=discord.Embed(title="Nyoku source code!", url="https://github.com/mattylive/Nyoku", description="Linked above is the full Nyoku source code (usually kept up to date with the production code)", colour=0xfc03df)
-    await ctx.send(embed=embed)
-
-@bot.command()
-async def catboy(ctx):
-    embed=discord.Embed(title="Catboy", url="https://cdn.donmai.us/sample/ac/d4/sample-acd4d3388360a9b5a1bcd860a25bd438.jpg", description="Enjoy this catboy image", color=0xfc03df)
-    embed.set_image(url="https://cdn.donmai.us/sample/ac/d4/sample-acd4d3388360a9b5a1bcd860a25bd438.jpg")
-    embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
     await ctx.send(embed=embed)
 
 @bot.command()
@@ -232,18 +248,18 @@ async def astolfo(ctx):
     embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
     await ctx.send(embed=embed)
 
-@bot.command(aliases=['gay'])
-async def yaoi(ctx):
-    if not ctx.channel.is_nsfw():
-        await ctx.send("Stop being horny in general")
-        return
-
-    yaoi = requests.get("https://purrbot.site/api/img/nsfw/yaoi/gif")
-
-    embed=discord.Embed(title="Yaoi", url="https://astolfo.rocks", description="too hot :pleading_face:", color=0xfc03df)
-    embed.set_image(url=(yaoi.json()["link"]))
-    embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
-    await ctx.send(embed=embed)
+#@bot.command(aliases=['gay'])
+#async def yaoi(ctx):
+#    if not ctx.channel.is_nsfw():
+#        await ctx.send("Stop being horny in general")
+#        return
+#
+#    yaoi = requests.get("https://purrbot.site/api/img/nsfw/yaoi/gif")
+#
+#    embed=discord.Embed(title="Yaoi", url="https://astolfo.rocks", description="too hot :pleading_face:", color=0xfc03df)
+#    embed.set_image(url=(yaoi.json()["link"]))
+#    embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
+#    await ctx.send(embed=embed)
 
 @bot.command()
 async def invite(ctx):
@@ -252,12 +268,12 @@ async def invite(ctx):
     embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
     await ctx.send(embed=embed)
 
-@bot.command(aliases=['testing'])
+@bot.command()
 async def test(ctx):
-#    test = requests.get("https://api.nekos.cc/hentai")
+    test = requests.get("https://api.nekos.cc/hentai")
 
     embed=discord.Embed(title="Test", url="https://api.nekos.cc/hentai", description="i hope it works", color=0xfc03df)
-    embed.set_image(url=('https://api.nekos.cc/hentai'))
+    embed.set_image(url=test.json()["url"])
     embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
     await ctx.send(embed=embed)
 
@@ -290,5 +306,15 @@ async def troll(ctx, member:discord.Member=None):
         embed.set_image(url=('https://api.nekos.cc/troll'))
         embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
         await ctx.send(embed=embed)
+
+@bot.command()
+async def catboy(ctx):
+    test = requests.get("https://api.nekos.cc/catboy")
+
+    embed=discord.Embed(title="Catboys :pleading_face: :smirk_cat:", url="https://api.nekos.cc/catboy", description="I wanna give headpats <:owo:856980651009114132>", color=0xfc03df)
+    embed.set_image(url=test.json()["url"])
+    embed.set_author(name="Nyoku", url='https://nekos.cc/Nyoku', icon_url='https://a.nekos.cc/1689')
+    await ctx.send(embed=embed)
+
 
 bot.run(TOKEN)
